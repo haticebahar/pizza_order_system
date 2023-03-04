@@ -22,7 +22,7 @@ class Pizza:
             
          print(line)
 
-class Klasik(Pizza):
+class Classic(Pizza):
     cost = 70.0
 
     def __init__(self):
@@ -30,21 +30,21 @@ class Klasik(Pizza):
         self.description = "Klasik Pizza Malzemeler: Kaşar,Sucuk,Sosis,Domates,Salam"
         print(self.description +"\n")
 
-class Margarita(Pizza):
+class Margaritha(Pizza):
     cost = 50.0
 
     def __init__(self):
         self.description = "Margarita Pizza Malzemeler: Mozarella,Fesleğen"
         print(self.description +"\n")
 
-class TurkPizza(Pizza):
+class TurkishPizza(Pizza):
     cost = 100.0
 
     def __init__(self):
         self.description = "Turkish Pizza Malzemeler: Soğan,Kavurma,Biber,Sarımsak,Kaşar"
         print(self.description +"\n")
         
-class SadePizza(Pizza):
+class PlainPizza(Pizza):
     cost = 80.0
 
 
@@ -64,42 +64,42 @@ class Decorator(Pizza):
         return self.component.get_description() + \
           ' ;' + Pizza.get_description(self)
           
-class Zeytin(Decorator):
+class Olive(Decorator):
     cost = 2.0
 
     def __init__(self, topping):
         Decorator.__init__(self, topping)
 
 
-class Mantar(Decorator):
+class Mushroom(Decorator):
     cost = 3.0
 
     def __init__(self, topping):
         Decorator.__init__(self, topping)
 
 
-class Peynir(Decorator):
+class Cheese(Decorator):
     cost = 4.0
 
     def __init__(self, topping):
         Decorator.__init__(self, topping)
 
 
-class Et(Decorator):
+class Meat(Decorator):
     cost = 10.0
 
     def __init__(self, topping):
         Decorator.__init__(self, topping)
 
 
-class Sogan(Decorator):
+class Onion(Decorator):
     cost = 5.0
 
     def __init__(self, topping):
         Decorator.__init__(self, topping)
 
 
-class Misir(Decorator):
+class Corn(Decorator):
     cost = 5.0
 
     def __init__(self, topping):
@@ -113,8 +113,8 @@ def main():
         
             Pizza.menu_listeleme(i)
     
-    menu_dict = {1: Klasik,2: Margarita,3: TurkPizza,4: SadePizza,5: Zeytin, 
-                  6: Mantar,7: Peynir,8: Et,9: Sogan,10: Misir}
+    menu_dict = {1: Classic,2: Margaritha,3: TurkishPizza,4: PlainPizza,5: Olive, 
+                  6: Mushroom,7: Cheese,8: Meat,9: Onion,10: Corn}
     
     choice = input("Lütfen menüden isteğiniz pizzayı seçiniz:")
     while choice not in ["1", "2", "3", "4"]:
