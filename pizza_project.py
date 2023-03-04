@@ -1,12 +1,10 @@
-# -*- coding: utf-8 -*-
-
-
+#Import csv and datetime libraries
 import csv
 import datetime
 import time
 import pandas as pd
 
-
+#Define the get_description() and get_cost() methods for encapsulation that creates the pizza class and inside this class.
 class Pizza:
     def get_description(self): 
         return self.__class__.__name__
@@ -18,6 +16,8 @@ class Pizza:
             
          print(line)
 
+        
+#Classic, Margherita, Turk Pizza, Dominos Pizza. Create pizza classes. Since each of these pizza types is a type of pizza, these classes will be defined as subclasses        
 class Classic(Pizza):
     cost = 70.0
 
@@ -47,7 +47,11 @@ class PlainPizza(Pizza):
     def __init__(self):
         self.description = "Sade Pizza Malzemeler: Sucuk, Kaşar,Zeytin,Mısır"
         print(self.description +"\n")
-  
+
+#Create a decorator class. Decorator is called super class of all sauce classes here. 
+#The decorator class will use the get_description() and get_cost() methods using the properties of the pizza class. 
+#Complete the decorator class using the following methods.
+
 class Decorator(Pizza):
     def __init__(self, topping):
         self.component = topping
@@ -59,7 +63,8 @@ class Decorator(Pizza):
     def get_description(self):
         return self.component.get_description() + \
           ' ;' + Pizza.get_description(self)
-          
+ 
+#Determine Olives, Mushrooms, Goat Cheese, Meat, Onions, and Corn as sauces, and define each of the sauces you have determined as a class.
 class Olive(Decorator):
     cost = 2.0
 
@@ -101,7 +106,11 @@ class Corn(Decorator):
     def __init__(self, topping):
         Decorator.__init__(self, topping)     
     
-    
+  
+#Create a main function. This function will print the menu on the screen first. Then let the user choose a pizza and sauce from the menu. 
+#After calculating the total price of the selected products, it should ask the user for a name, ID number, credit card number and credit card password. 
+#with all required information
+
 def main():
     with open("Menu.txt","r",encoding= "utf-8") as file:
     
@@ -125,7 +134,9 @@ def main():
             order = menu_dict[int(choice)](order)
     
     
-            
+#Calculate the payments of the people who choose their pizza and keep the user's name, user id, credit card information, description of order, 
+#time order and credit card password in the "Orders_Database.csv" file, which we call the database.            
+
     print("\n" + order.get_description().strip() + " " + str(order.get_cost()) + " TL")
     
     print("\n")
