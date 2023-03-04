@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sat Mar  4 14:58:00 2023
 
-@author: asus
-"""
 
 import csv
 import datetime
