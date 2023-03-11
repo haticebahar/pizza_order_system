@@ -1,13 +1,23 @@
 * Lütfen Bir Pizza Tabanı Seçiniz:
 1: Klasik
 2: Margarita
-3: TürkPizza
-4: SadePizza
+3: Türk Pizza
+4: Sade Pizza
+5: Kavurmalı Pizza
+6: Mantarsever Pizza
+7: Sucuksever Pizza
+8: Kantin Pizza
+9: Süperos Pizza
+10: Vejeteryan Pizza
 * ve seçeceğiniz sos:
 11: Zeytin
-12: Mantarlar
-13: KeçiPeyniri
+12: Mantar
+13: Peynir
 14: Et
 15: Soğan
 16: Mısır
-* Teşekkür ederiz!
+17: Pastırma
+18: Jambon
+19: Kıyma
+20: Sucuk
+* Teşekkür Ederiz! 
