@@ -1,4 +1,4 @@
-* Lütfen Bir Pizza Tabanı Seçiniz:
+* Lütfen Bir Pizza  Seçiniz:
 1: Klasik
 2: Margarita
 3: Türk Pizza
